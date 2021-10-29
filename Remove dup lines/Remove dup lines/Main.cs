@@ -91,6 +91,9 @@ namespace Remove_dup_lines
                     Win32.SendMessage(PluginBase.GetCurrentScintilla(), SciMsg.SCI_CLEARSELECTIONS, 0, 0);
                     return;
                 }
+
+                outputStrin += "\r\n=================\r\ngood luck";
+
                 Win32.SendMessage(PluginBase.GetCurrentScintilla(), SciMsg.SCI_REPLACESEL, 0, outputStrin);
             }
             catch (Exception exp)
